@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom PC Build checkout</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- linking remix-icon cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/custom-pc-checkout.css">
+  <link rel="shortcut icon" href="./images/index-images/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    
+     <!-- HEADER -->
+    <header class="header-section">
+        <div class="logo-text-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/index-images/logo.png" alt="logo">
+                </a>
+            </div>
+            <h2>TechBuild</h2>
+        </div>
+
+        <div class="input-box">
+            <input type="text" placeholder="search for component, pheripherals, etc..">
+            <button>
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+
+        <div class="btn-cart-user-container">
+            <div class="btn-container">
+                <button class="build-pc-btn">
+                    <img src="./images/index-images/screw-driver.png" alt="img">
+                    <span>Build PC</span>
+                </button>
+                <div class="cart-user-container">
+                    <button class="add-to-cart-btn"><i class="ri-shopping-cart-2-line"></i></button>
+                    <button id="user-profile-btn"><i class="ri-user-line"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- breadcrumber  -->
+  <nav class="breadcrumbercontainer" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">/</span>
+
+    <a href="./selectpurpose1.html">Custom PC</a>
+    <span class="breadcrumb-sep">/</span>
+    
+    <a href="custom-pc.html">Gaming PC</a>
+    <span class="breadcrumb-sep">/</span>
+
+    <span aria-current="page">Checkout</span>
+
+</nav>
+
+
+    <div class="checkout-container">
+        
+    <div class="header-top">
+        <a href="custom-pc.html" class="back-link">
+            <i class="ri-arrow-left-line"></i> Return to Builder
+        </a>
+    </div>
+
+    <header class="checkout-header">
+        <h1>Your Masterpiece is Ready</h1>
+        <p>Review your final configuration before placing the order.</p>
+    </header>
+
+    <div class="main-checkout-grid">
+        <aside class="component-review-section">
+            <div class="checkout-card">
+                <h3>Selected Components</h3>
+                <ul id="checkout-component-list">
+                    <li class="empty-msg">Error loading your build. Please go back.</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="order-finalization-section">
+            
+            <div class="checkout-card summary-card">
+                <div class="summary-details">
+                    <div class="summary-row"><span>Subtotal:</span> <span id="summary-subtotal">₹0</span></div>
+                    <div class="summary-row discount"><span>Total Discount:</span> <span id="summary-discount">-₹1,300</span></div>
+                    <div class="summary-row"><span>Shipping (Standard):</span> <span class="free">Free</span></div>
+                    <div class="summary-row tax"><span>Tax (8.5%):</span> <span id="summary-tax">₹0</span></div>
+                    <div class="total-payable">
+                        <span>Total:</span>
+                        <span id="final-total">₹0</span>
+                    </div>
+                </div>
+
+    <div class="checkout-payment-accordion">
+      <h2 class="checkout-title">Payment Options</h2>
+
+      <div class="payment-row">
+        <label class="row-header">
+          <div class="row-info">
+            <i class="ri-flashlight-fill upi-icon"></i>
+            <span class="method-title">UPI</span>
+          </div>
+          <i class="ri-arrow-down-s-line dropdown-icon"></i>
+        </label>
+        <div class="row-content">
+          <p class="content-desc">Choose an option</p>
+          <select class="payment-dropdown">
+            <option value="" disabled selected>Select UPI App</option>
+            <option value="phonepe">PhonePe</option>
+            <option value="gpay">Google Pay</option>
+          </select>
+          <button class="btn-pay-secure">PAY ₹2,97,000</button>
+        </div>
+      </div>
+
+      <div class="payment-row">
+        <label class="row-header">
+          <div class="row-info">
+            <i class="ri-bank-card-line"></i>
+            <span class="method-title">Card</span>
+          </div>
+          <i class="ri-arrow-down-s-line dropdown-icon"></i>
+        </label>
+        <div class="row-content">
+          <input type="text" placeholder="Card Number" class="form-input">
+          <button class="btn-pay-secure">PAY ₹2,97,000</button>
+        </div>
+      </div>
+        <div class="payment-row cod-row">
+            <label class="row-header" for="cod-input"> <input type="radio" name="payment-group" id="cod"> 
+                <div class="row-info">
+                    <i class="ri-hand-coin-line"></i>
+                    <label class="method-title" for="cod"">Cash on Delivery</label>
+                </div>
+                <i class="ri-arrow-down-s-line dropdown-icon"></i>
+            </label>
+            <div class="row-content">
+                <p class="content-desc">Pay at your doorstep after receiving the package.</p>
+                <button class="btn-confirm-order">PLACE ORDER</button>
+            </div>
+        </div>
+
+    </div>
+    
+            </div>
+
+            <div class="checkout-card shipping-card">
+                <div class="form-header">
+                    <h3>Shipping Address</h3>
+                    <a href="#" class="saved-address-link">Use Saved Address</a>
+                </div>
+                
+                <form class="shipping-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name (optional)">
+                    </div>
+                    <input type="text" placeholder="Street name and house number">
+                    <div class="input-group trio">
+                        <input type="text" placeholder="City">
+                        <select>
+                            <option>Gujarat</option>
+                            <option>Maharashtra</option>
+                            <option>Karnataka</option>
+                        </select>
+                        <input type="text" placeholder="Zip Code">
+                    </div>
+                </form>
+            </div>
+
+        </main>
+    </div>
+</div>
+
+
+    
+
+    <!-- footer section starts -->
+    <footer>
+        <div class="footer-container">
+                <div class="footer-top-container">
+
+                        <div class="brand-container">
+                            <div class="brand-logo">
+                                <img src="./images/index-images/logo.png" alt="logo">
+                                <h2>TechBuild</h2>
+                            </div>
+                            <div class="brand-content">
+                                <p>The ultimate destination for PC enthusiasts. High-end components, peripherals, and custom builds for gamers and creators.</p>
+                            </div>
+                        </div>
+
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>Shop</h3>
+                            </div>
+                            <div class="link-menu">
+                                <ul>
+                                    <li><a href="#">Build your PC</a></li>
+                                    <li><a href="#">Processors</a></li>
+                                    <li><a href="#">Graphic cards</a></li>
+                                    <li><a href="#">Gaming Laptops</a></li>
+                                    <li><a href="#">Pheripherals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>Support</h3>
+                            </div>
+                            <div class="link-menu">
+                                <ul>
+                                    <li><a href="#">Orders Status</a></li>
+                                    <li><a href="#">Returns & warranty</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">PC Builder Guide</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>News Letters</h3>
+                            </div>
+                            <div class="offer-para-container">
+                                <p>Subscribe to get special offers, free giveaways, and deal</p>
+                            </div>
+                            <form id="emailForm" action="">
+                                <div class="input-field">
+                                    <input type="email" name="email" id="eid" placeholder="john@gmail.com" required>
+                                    <button id="mess-send-btn" type="submit">Send</button>
+                                </div>
+                            </form>    
+                        </div>
+                    
+                </div>
+                <div class="footer-bottom-container">
+                    <div class="footer-link-container">
+                        <a href="#">Private Policies</a>
+                        <a href="#">Terms Of Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/footer-js/footer.js"></script>
+    <script src="./js/custom-pc-checkout-js/custom-pc-checkout.js"></script>
+    <script src="./js/header-js/header.js"></script>
+</body>
+</html>

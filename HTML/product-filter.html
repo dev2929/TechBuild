@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profuct filter</title>
+    <!-- tailwind css cdn link  and fonts link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font: space grotesk link  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!-- linking remix-icon cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- linking the css file : first.css  -->
+    <link rel="stylesheet" href="css/product-filter.css">
+    <link rel="shortcut icon" href="./images/index-images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+     <!-- HEADER -->
+    <header class="header-section">
+        <div class="logo-text-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/index-images/logo.png" alt="logo">
+                </a>
+            </div>
+            <h2>TechBuild</h2>
+        </div>
+
+        <div class="input-box">
+            <input type="text" placeholder="search for component, pheripherals, etc..">
+            <button>
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+
+        <div class="btn-cart-user-container">
+            <div class="btn-container">
+                <button class="build-pc-btn">
+                    <img src="./images/index-images/screw-driver.png" alt="img">
+                    <span>Build PC</span>
+                </button>
+                <div class="cart-user-container">
+                    <button class="add-to-cart-btn"><i class="ri-shopping-cart-2-line"></i></button>
+                    <button id="user-profile-btn"><i class="ri-user-line"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- product listing section starts  -->
+        <section class="product-listing">
+            <div class="product-listing-container">
+                <div class="product-filtering-container">
+
+                    <!-- breadcrumb  -->
+                    <div class="breadcrumb-container">
+                        <a href="index.html">Home</a>
+                        <span>/</span>
+                        <a href="index.html">components</a>
+                        <span>/</span>
+                        <span>Graphic cards</span>
+                    </div>
+                    <!-- breadcrumb end  -->
+
+                    <div class="filter-container">
+                        <div class="title-reset-container">
+
+                            <p>Filter</p>
+
+                            <button type="reset">Reset</button>
+                        </div>
+
+                        <div class="price-range-container">
+                            <h4>Price Range</h4>
+                            <div class="range">
+
+                                <div class="wrapper">
+                                    <span>₹</span>
+                                    <input type="number" class="first-range" min="0" value="0" placeholder="From">
+                                </div>
+                                <div class="wrapper">
+                                    <span>₹</span>
+                                    <input type="number" class="second-range" min="0" placeholder="To ?">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="availability-container">
+                            <h4>Availability</h4>
+
+                            <div class="wrapper">
+                                <label for="check">
+                                    <input type="checkbox" id="check">
+                                    Exclude out of stock items
+                                </label>
+                                <!-- <p>Exclude out of stock items</p> -->
+                            </div>
+
+                        </div>
+
+
+                        <!-- Processor Brand -->
+                        <div class="filter-group">
+                            <div class="filter-header">
+                                <span>PROCESSOR BRAND</span>
+                                <i class="ri-arrow-down-s-line icon"></i>
+                            </div>
+
+                            <div class="filter-content">
+                                <label><input type="checkbox"> Intel</label>
+                                <label><input type="checkbox"> AMD</label>
+                            </div>
+                        </div>
+
+                        <!-- Series -->
+                        <div class="filter-group">
+                            <div class="filter-header">
+                                <span>SERIES</span>
+                                <i class="ri-arrow-down-s-line icon"></i>
+                            </div>
+
+                            <div class="filter-content">
+                                <label><input type="checkbox"> Core i9</label>
+                                <label><input type="checkbox"> Core i7</label>
+                                <label><input type="checkbox"> Core i5</label>
+                                <label><input type="checkbox"> Ryzen 9</label>
+                                <label><input type="checkbox"> Ryzen 7</label>
+                                <label><input type="checkbox"> Ryzen 5</label>
+                            </div>
+                        </div>
+
+                        <!-- socket -->
+                        <div class="filter-group">
+                            <div class="filter-header">
+                                <span>SOCKET</span>
+                                <i class="ri-arrow-down-s-line icon"></i>
+                            </div>
+
+                            <div class="filter-content">
+                                <label><input type="checkbox"> LGA 1700</label>
+                                <label><input type="checkbox"> LGA 1200</label>
+                                <label><input type="checkbox"> AM4</label>
+                                <label><input type="checkbox"> AM5</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="product-details-container">
+
+                    <div class="shortlist-container">
+                        <div class="product-title-result-container">
+                            <h1>Graphics Cards</h1>
+                            <p>Showing 1-6 of <span>124 </span> products </p>
+                        </div>
+                        <div class="dropdown">
+                            <p>Shorted by result</p>
+                            <select>
+                                <option>Select by Featured</option>
+                                <option>New Arrivals</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                            </select>
+
+                            <i class="ri-arrow-down-s-line dropdown-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-card-container">
+                        <div class="card-container">
+                            <div class="img-container">
+                                <img src="./images/product-filter-images/graphiccard-thumbnail-1-img.png" alt="">
+                                
+                                <div class="overlay-container">
+                                    <a href="./product-detail.html">view details</a>
+                                </div>
+                            </div>
+                            <div class="card-detail-container">
+
+                                <div class="rating-container">
+                                    <div class="starts-container">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <div class="review-container">
+                                        <a href="product-detail.html">view details</a>
+                                    </div>
+                                </div>
+
+                                <div class="title-desc-container">
+                                    <div class="title-container">
+                                        <h2>ZEBRONICS GT740-4GD3 Graphic Card</h2>
+                                    </div>
+                                    <div class="desc-container">
+                                        <ul>
+                                            <li>
+                                                <p class="title">Architecture:</p>
+                                                <p class="info">NVIDIA Kepler</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Memory(VRAM)</p>
+                                                <p class="info">4GB GDDR3</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Boost clock:</p>
+                                                <p class="info">993 MHz</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">interface:</p>
+                                                <p class="info">PCIe 3.0 x16</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Cooling type:</p>
+                                                <p class="info">Single Fan</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rupees-cart-container">
+                                    <p>
+                                        <Span>₹</Span>
+                                        <span>3,400</span>
+                                    </p>
+
+                                    <button class="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-2-line header-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-container">
+                            <div class="img-container">
+                                <img src="./images/product-filter-images/graphiccard-thumbnail-2-img.png" alt="">
+                                 <div class="overlay-container">
+                                    <a href="./product-detail.html">view details</a>
+                                 </div>
+                            </div>
+                            <div class="card-detail-container">
+
+                                <div class="rating-container">
+                                    <div class="starts-container">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <div class="review-container">
+                                        <a href="product-detail.html">view details</a>
+                                    </div>
+                                </div>
+
+                                <div class="title-desc-container">
+                                    <div class="title-container">
+                                        <h2>FRONTECH GT730-4GD3 Graphic Card </h2>
+                                    </div>
+                                    <div class="desc-container">
+                                        <ul>
+                                            <li>
+                                                <p class="title">Architecture:</p>
+                                                <p class="info">NVIDIA Fermi / Kepler (Rebrand)</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Memory(VRAM)</p>
+                                                <p class="info">4GB DDR3</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Boost clock:</p>
+                                                <p class="info">700 MHz</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">interface:</p>
+                                                <p class="info">2.0 x16 (runs at x8)</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Cooling type:</p>
+                                                <p class="info">Single Fan</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rupees-cart-container">
+                                    <p>
+                                        <Span>₹</Span>
+                                        <span>2,800</span>
+                                    </p>
+
+                                    <button class="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-2-line header-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-container">
+                            <div class="img-container">
+                                <img src="./images/product-filter-images/graphiccard-thumbnail-3-img.png" alt="">
+                                <div class="overlay-container">
+                                    <a href="./product-detail.html">view details</a>
+                                 </div>
+                            </div>
+                            <div class="card-detail-container">
+
+                                <div class="rating-container">
+                                    <div class="starts-container">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <div class="review-container">
+                                        <a href="product-detail.html">view details</a>
+                                    </div>
+                                </div>
+
+                                <div class="title-desc-container">
+                                    <div class="title-container">
+                                        <h2>PNY Geforce RTX 4060 Ti 8GB pci_e_x16Verto Dual Fan DLSS 3 Edition GDDR6 128-Bit Gaming Graphic Card</h2>
+                                    </div>
+                                    <div class="desc-container">
+                                        <ul>
+                                            <li>
+                                                <p class="title">Architecture:</p>
+                                                <p class="info">NVIDIA Ada Lovelace</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Memory(VRAM)</p>
+                                                <p class="info">8GB GDDR6</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Boost clock:</p>
+                                                <p class="info">2.54 GHz</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">interface:</p>
+                                                <p class="info">PCIe 4.0 x8</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Cooling type:</p>
+                                                <p class="info">Verto Dual Fan</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rupees-cart-container">
+                                    <p>
+                                        <Span>₹</Span>
+                                        <span>35,000</span>
+                                    </p>
+
+                                    <button class="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-2-line header-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-container">
+                            <div class="img-container">
+                                <img src="./images/product-filter-images/graphiccard-thumbnail-4-img.png" alt="">
+                                <div class="overlay-container">
+                                    <a href="./product-detail.html">view details</a>
+                                 </div>
+                            </div>
+                            <div class="card-detail-container">
+
+                                <div class="rating-container">
+                                    <div class="starts-container">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <div class="review-container">
+                                        <a href="product-detail.html">view details</a>
+                                    </div>
+                                </div>
+
+                                <div class="title-desc-container">
+                                    <div class="title-container">
+                                        <h2>ASRock Challenger Intel Arc A380 Gddr6 6Gb </h2>
+                                    </div>
+                                    <div class="desc-container">
+                                        <ul>
+                                            <li>
+                                                <p class="title">Architecture:</p>
+                                                <p class="info">Intel Xe-HPG (Alchemist)</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Memory(VRAM)</p>
+                                                <p class="info">6GB GDDR6</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Boost clock:</p>
+                                                <p class="info">2250 MHz</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">interface:</p>
+                                                <p class="info">PCIe 4.0 x8</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Cooling type:</p>
+                                                <p class="info">Single Axial Fan</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rupees-cart-container">
+                                    <p>
+                                        <Span>₹</Span>
+                                        <span>17,000</span>
+                                    </p>
+
+                                    <button class="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-2-line header-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-container">
+                            <div class="img-container">
+                                <img src="./images/product-filter-images/graphiccard-thumbnail-5-img.png" alt="">
+                                <div class="overlay-container">
+                                    <a href="./product-detail.html">view details</a>
+                                 </div>
+                            </div>
+                            <div class="card-detail-container">
+
+                                <div class="rating-container">
+                                    <div class="starts-container">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <div class="review-container">
+                                        <a href="product-detail.html">view details</a>
+                                    </div>
+                                </div>
+
+                                <div class="title-desc-container">
+                                    <div class="title-container">
+                                        <h2>Sparkle Intel Arc B570 Guardian OC Graphics Card, 10GB GDDR6, Torn Cooling 2.0, Axial Fan, Breathing Light, Metal Backplate, SB570G-10GOC </h2>
+                                    </div>
+                                    <div class="desc-container">
+                                        <ul>
+                                            <li>
+                                                <p class="title">Architecture:</p>
+                                                <p class="info">Intel Xe2-HPG (Battlemage)</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Memory(VRAM)</p>
+                                                <p class="info">10GB GDDR6</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Boost clock:</p>
+                                                <p class="info">2.6 GHz+ (OC Edition)</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">interface:</p>
+                                                <p class="info">PCIe 5.0 x16</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Cooling type:</p>
+                                                <p class="info">Torn Cooling 2.0 (Triple Fan)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rupees-cart-container">
+                                    <p>
+                                        <Span>₹</Span>
+                                        <span>58,000</span>
+                                    </p>
+
+                                    <button class="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-2-line header-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-container">
+                            <div class="img-container">
+                                <img src="./images/product-filter-images/graphiccard-thumbnail-6-img.png" alt="">
+                                <div class="overlay-container">
+                                    <a href="./product-detail.html">view details</a>
+                                 </div>           
+                            </div>
+                            <div class="card-detail-container">
+
+                                <div class="rating-container">
+                                    <div class="starts-container">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-line"></i>
+                                    </div>
+                                    <div class="review-container">
+                                        <a href="product-detail.html">view details</a>
+                                    </div>
+                                </div>
+
+                                <div class="title-desc-container">
+                                    <div class="title-container">
+                                        <h2>POWER COLOR Red Dragon AMD RX 550, 2GB GDDR5 Graphics Card</h2>
+                                    </div>
+                                    <div class="desc-container">
+                                        <ul>
+                                            <li>
+                                                <p class="title">Architecture:</p>
+                                                <p class="info">AMD GCN 4.0 (Lexa)</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Memory(VRAM)</p>
+                                                <p class="info">2GB GDDR5</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Boost clock:</p>
+                                                <p class="info">1071 MHz</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">interface:</p>
+                                                <p class="info">PCIe 3.0 x8</p>
+                                            </li>
+                                            <li>
+                                                <p class="title">Cooling type:</p>
+                                                <p class="info">Single Fan</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="rupees-cart-container">
+                                    <p>
+                                        <Span>₹</Span>
+                                        <span>5,000</span>
+                                    </p>
+
+                                    <button class="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-2-line header-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <section>
+                <div class="navigation-button-section">
+                    <div class="navigation-button-container">
+                        <button><span>1</span></button>
+                        <button><span>2</span></button>
+                        <button><span>3</span></button>
+                        <button><span>4</span></button>
+                        <span>....</span>
+                        <button><span>124</span></button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+    
+    <!-- footer section starts -->
+    <footer>
+        <div class="footer-container">
+                <div class="footer-top-container">
+
+                        <div class="brand-container">
+                            <div class="brand-logo">
+                                <img src="./images/index-images/logo.png" alt="logo">
+                                <h2>TechBuild</h2>
+                            </div>
+                            <div class="brand-content">
+                                <p>The ultimate destination for PC enthusiasts. High-end components, peripherals, and custom builds for gamers and creators.</p>
+                            </div>
+                        </div>
+
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>Shop</h3>
+                            </div>
+                            <div class="link-menu">
+                                <ul>
+                                    <li><a href="#">Build your PC</a></li>
+                                    <li><a href="#">Processors</a></li>
+                                    <li><a href="#">Graphic cards</a></li>
+                                    <li><a href="#">Gaming Laptops</a></li>
+                                    <li><a href="#">Pheripherals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>Support</h3>
+                            </div>
+                            <div class="link-menu">
+                                <ul>
+                                    <li><a href="#">Orders Status</a></li>
+                                    <li><a href="#">Returns & warranty</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">PC Builder Guide</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>News Letters</h3>
+                            </div>
+                            <div class="offer-para-container">
+                                <p>Subscribe to get special offers, free giveaways, and deal</p>
+                            </div>
+                            <form id="emailForm" action="">
+                                <div class="input-field">
+                                    <input type="email" name="email" id="eid" placeholder="john@gmail.com" required>
+                                    <button id="mess-send-btn" type="submit">Send</button>
+                                </div>
+                            </form>    
+                        </div>
+                    
+                </div>
+                <div class="footer-bottom-container">
+                    <div class="footer-link-container">
+                        <a href="#">Private Policies</a>
+                        <a href="#">Terms Of Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="./js/footer-js/footer.js"></script>
+<script src="./js/product-filter-js/product-filter.js"></script>
+<script src="./js/header-js/header.js"></script>
+</body>
+
+</html>

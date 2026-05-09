@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="fonts.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/sign-up.css">
+
+</head>
+
+<body class="body-wrapper">
+
+    <video autoplay muted loop class="bg-video">
+        <source src="./videos/sign-up-video/gfx-video-background.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+
+        <form>
+
+            <h1 class="signup-title">Sign Up Now</h1>
+
+            <div class="input-split-box">
+
+                <div class="split-field">
+                    <input type="text" required class="textbox" placeholder=" ">
+                    <label>First name</label>
+                </div>
+
+                <div class="split-field">
+                    <input type="text" required class="textbox" placeholder=" ">
+                    <label>Last name</label>
+                </div>
+
+            </div>
+
+            <div class="input-box">
+                <input type="email" required class="textbox" placeholder=" ">
+                <label>Email</label>
+            </div>
+
+            <div class="input-box">
+                <input type="tel" pattern="[0-9]{10}" maxlength="10" required class="textbox" placeholder=" ">
+                <label>Phone number</label>
+            </div>
+
+            <div class="input-box eye-container">
+                <input type="password" required class="textbox" placeholder=" " id="eye_input">
+                <label>Password</label>
+                <i class="ri-eye-close-line" id="eye-icon"></i>
+            </div>
+
+            <p class="password-hint">
+                use atlest 8 or more characters with mix of letters, numbers & symbols
+            </p>
+
+            <div class="checkbox-box">
+
+                <input type="checkbox">
+
+                <p class="para">
+                    By creating an account, I agree to the
+                    <a href="#">Terms of use</a>
+                    and
+                    <a href="#">privacy policy</a>
+                </p>
+
+            </div>
+
+            <div class="btn-box">
+                <button type="submit" class="signup-btn">
+                    Sign up
+                </button>
+            </div>
+
+            <div class="link-box">
+                <p>
+                    Already have an account?
+                    <a href="login-in.html">Login</a>
+                </p>
+            </div>
+
+        </form>
+
+    </div>
+<script src="./js/sign-up-js/signup.js"></script>
+</body>
+
+</html>
