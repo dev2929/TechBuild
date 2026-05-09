@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Google Font -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="fonts.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body class="body-wrapper">
+
+    <div class="container">
+        <form>
+            <h1 class="login-title">Login</h1>
+
+            <!-- Email -->
+            <div class="input-box">
+                <input type="email" placeholder="Email ID" required class="email-input">
+                <i class="ri-user-fill input-icon"></i>
+            </div>
+
+            <!-- Password -->
+            <div class="input-box">
+                <input type="password" placeholder="Password" required class="password-input" id="lock_input">
+                <i class="ri-lock-fill input-icon" id="lock_icon"></i>
+            </div>
+
+            <!-- Remember -->
+            <div class="remember-me-forget-box">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me" class="remember-label">
+                        Remember me
+                    </label>
+                </div>
+                <a href="#" class="forget-link">Forget Password?</a>
+            </div>
+
+            <!-- Button -->
+            <button class="login-btn">
+                <span class="btn-bg"></span>
+                <span class="btn-text">Login</span>
+
+            </button>
+
+            <!-- Register -->
+            <div class="register-box">
+                <p>
+                    Don't have an account?
+                    <a href="sign-up.html" class="sign-up-link">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/login-js/login.js"></script>
+</body>
+
+</html>

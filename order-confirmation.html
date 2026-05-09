@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order confirmation</title>
+        
+    <!-- tailwind css cdn link  and fonts link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- linking remix-icon cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet" href="./css/order-confirmation.css">
+  <link rel="shortcut icon" href="./images/index-images/logo.png" type="image/x-icon">
+
+</head>
+<body>
+
+     <!-- HEADER -->
+    <header class="header-section">
+        <div class="logo-text-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/index-images/logo.png" alt="logo">
+                </a>
+            </div>
+            <h2>TechBuild</h2>
+        </div>
+
+        <div class="input-box">
+            <input type="text" placeholder="search for component, pheripherals, etc..">
+            <button>
+                <i class="ri-search-line"></i>
+            </button>
+        </div>
+
+        <div class="btn-cart-user-container">
+            <div class="btn-container">
+                <button class="build-pc-btn">
+                    <img src="./images/index-images/screw-driver.png" alt="img">
+                    <span>Build PC</span>
+                </button>
+                <div class="cart-user-container">
+                    <button class="add-to-cart-btn"><i class="ri-shopping-cart-2-line"></i></button>
+                    <button id="user-profile-btn"><i class="ri-user-line"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+<div class="confirmation-page">
+  <header class="success-header">
+    <div class="success-icon">
+      <i class="ri-check-line"></i>
+    </div>
+    <h1>Order Confirmed!</h1>
+    <p>Thanks for your purchase, <strong>Rushit</strong>. We've received your order <span>#ORD-4921</span> and will notify you once it ships.</p>
+    <div class="header-actions">
+      <button class="btn btn-primary">View Order Status <i class="ri-arrow-right-line"></i></button>
+      <button class="btn btn-ghost conti-shopping-btn">Continue Shopping</button>
+    </div>
+  </header>
+
+<main class="main-layout">
+  <section class="details-left">
+    <div class="card tracking-card">
+      <div class="card-header">
+        <i class="ri-truck-line"></i>
+        <h3>Estimated Delivery</h3>
+      </div>
+      <p class="delivery-date">Tuesday, Nov 07 - Thursday, Nov 09</p>
+      <div class="stepper">
+        <div class="step-bar">
+          <div class="fill" style="width: 33%;"></div>
+        </div>
+        <div class="step-labels">
+          <span class="active">Processing</span>
+          <span>Shipped</span>
+          <span>Delivered</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card summary-card">
+      <div class="card-header space-between">
+        <h3>Order Summary</h3>
+        <span class="badge">3 Items</span>
+      </div>
+      <div class="order-items-list">
+
+        <div class="confirm-item">
+          <img src="./images/order-confirmation-images/graphiccard-thumbnail-1-img.png" alt="GPU">
+          <div class="item-info">
+            <h4>ZEBRONICS GT740-4GD3</h4>
+          </div>
+          <div class="item-price">₹3,400</div>
+        </div>
+
+        <div class="confirm-item">
+          <img src="./images/order-confirmation-images/graphiccard-thumbnail-2-img.png" alt="GPU">
+          <div class="item-info">
+            <h4>PNY Geforce RTX 4060 Ti</h4>
+          </div>
+          <div class="item-price">₹2,900</div>
+        </div>
+        
+        <div class="confirm-item">
+          <img src="./images/order-confirmation-images/graphiccard-thumbnail-3-img.png" alt="GPU">
+          <div class="item-info">
+            <h4>PNY Geforce RTX 4060 Ti 8GB pci_e_x16Verto Dual Fan DLSS 3 Edition GDDR6 128-Bit Gaming Graphic Card</h4>
+          </div>
+          <div class="item-price">₹35,000</div>
+        </div>
+
+      </div>
+    </div>
+
+<div class="card address-card">
+    <div class="card-header">
+        <div class="location-icon">
+            <i class="ri-map-pin-2-line"></i>
+            <h3>Shipping Address</h3>
+        </div>
+
+        <button class="edit-address-btn"><i class="ri-edit-line"></i></button>
+    </div>
+    
+    <address class="user-address-content">
+        <strong id="user-name-display">Rushit</strong>
+        <p id="user-address-line">Divine Resendency</p>
+        <p id="user-location-display">Ahmedabad, Gujarat, India, 352481</p>
+        <p id="user-phone-display">+91 9327428209</p>
+    </address>
+</div>
+
+  </section>
+
+<aside class="details-right">
+    <div class="card info-card">
+        <h3>Payment Details</h3>
+        
+        <div class="price-list">
+            <div class="price-row">
+                <span>Subtotal</span>
+                <span>₹10,200</span>
+            </div>
+            <div class="price-row">
+                <span>Total discount</span>
+                <span>-₹1,300</span>
+            </div>
+            <div class="price-row">
+                <span>Shipping (express)</span>
+                <span class="text-green">Free</span>
+            </div>
+            <div class="price-row">
+                <span>Tax (8.5%)</span>
+                <span>₹867</span>
+            </div>
+            
+            <hr class="summary-divider">
+            
+            <div class="price-row total">
+                <span>Total</span>
+                <span class="final-amount">₹9,767</span>
+            </div>
+        </div>
+
+        <div class="paid-via-container" id="payment-receipt-block">
+            <span class="label-caps">PAID WITH</span>
+            <div class="receipt-badge">
+                <div class="receipt-icon-box">
+                    <i class="ri-bank-card-fill" id="receipt-method-icon"></i>
+                </div>
+                <div class="receipt-details">
+                    <p class="method-name" id="receipt-method-name">credit card ending in 4242</p>
+                    <p class="method-status" id="receipt-method-status">Processed successfully !</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+</main>
+  
+</div>
+
+
+
+    <!-- footer section starts -->
+    <footer>
+        <div class="footer-container">
+                <div class="footer-top-container">
+
+                        <div class="brand-container">
+                            <div class="brand-logo">
+                                <img src="./images/index-images/logo.png" alt="logo">
+                                <h2>TechBuild</h2>
+                            </div>
+                            <div class="brand-content">
+                                <p>The ultimate destination for PC enthusiasts. High-end components, peripherals, and custom builds for gamers and creators.</p>
+                            </div>
+                        </div>
+
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>Shop</h3>
+                            </div>
+                            <div class="link-menu">
+                                <ul>
+                                    <li><a href="#">Build your PC</a></li>
+                                    <li><a href="#">Processors</a></li>
+                                    <li><a href="#">Graphic cards</a></li>
+                                    <li><a href="#">Gaming Laptops</a></li>
+                                    <li><a href="#">Pheripherals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>Support</h3>
+                            </div>
+                            <div class="link-menu">
+                                <ul>
+                                    <li><a href="#">Orders Status</a></li>
+                                    <li><a href="#">Returns & warranty</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">PC Builder Guide</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="link-container">
+                            <div class="link-title">
+                                <h3>News Letters</h3>
+                            </div>
+                            <div class="offer-para-container">
+                                <p>Subscribe to get special offers, free giveaways, and deal</p>
+                            </div>
+                            <form id="emailForm" action="">
+                                <div class="input-field">
+                                    <input type="email" name="email" id="eid" placeholder="john@gmail.com" required>
+                                    <button id="mess-send-btn" type="submit">Send</button>
+                                </div>
+                            </form>    
+                        </div>
+                    
+                </div>
+                <div class="footer-bottom-container">
+                    <div class="footer-link-container">
+                        <a href="#">Private Policies</a>
+                        <a href="#">Terms Of Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="./js/footer-js/footer.js"></script>
+<script src="./js/order-confirmation-js/order-confirmation.js"></script>
+<script src="./js/header-js/header.js"></script>
+</body>
+</html>
